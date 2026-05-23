@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernal María Luz | Abogada | Estudio Jurídico</title>
+    <meta name="description" content="Estudio jurídico de Bernal María Luz. Especialistas en derecho de famililia, divorcios, y asesoramiento legal integral. Atención personalizada y confidencial.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root{--color-black:#0a0a0a;--color-dark:#1a1a1a;--color-gold:#c9a961;--color-gold-light:#e0c78a;--color-cream:#f5f0e8;--color-cream-dark:#e8e0d4;--color-white:#ffffff;--font-serif:'Cormorant Garamond',serif;--font-sans:'Montserrat',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--font-sans);background-color:var(--color-black);color:var(--color-cream);overflow-x:hidden;line-height:1.6}
+        ::-webkit-scrollbar{width:8px}
+        ::-webkit-scrollbar-track{background:var(--color-dark)}
+        ::-webkit-scrollbar-thumb{background:var(--color-gold);border-radius:4px}
+        nav{position:fixed;top:0;width:100%;z-index:1000;padding:1.5rem 5%;transition:all .4s ease;background:transparent}
+        nav.scrolled{background:rgba(10,10,10,.95);backdrop-filter:blur(10px);padding:1rem 5%;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+        .nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-family:var(--font-serif);font-size:1.5rem;font-weight:600;color:var(--color-gold);text-decoration:none;letter-spacing:2px}
+        .logo span{color:var(--color-cream);font-weight:300}
+        .nav-links{display:flex;gap:2.5rem;list-style:none}
+        .nav-links a{color:var(--color-cream);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s ease;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:var(--color-gold);transition:width .3s ease}
+        .nav-links a:hover{color:var(--color-gold)}
+        .nav-links a:hover::after{width:100%}
+        .mobile-menu-btn{display:none;background:none;border:none;color:var(--color-gold);font-size:1.5rem;cursor:pointer}
+        .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--color-black) 0%,var(--color-dark) 100%)}
+        .hero::before{content:'';position:absolute;top:0;right:0;width:60%;height:100%;background:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;opacity:.3;mask-image:linear-gradient(to left,black 50%,transparent 100%);-webkit-mask-image:linear-gradient(to left,black 50%,transparent 100%)}
+        .hero-container{max-width:1400px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
+        .hero-content{animation:fadeInUp 1s ease}
+        .hero-badge{display:inline-flex;align-items:center;gap:.5rem;color:var(--color-gold);font-size:.9rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:2rem;font-weight:500}
+        .hero-badge i{font-size:1.2rem}
+        .hero h1{font-family:var(--font-serif);font-size:clamp(3rem,6vw,5rem);font-weight:300;line-height:1.1;margin-bottom:1.5rem;color:var(--color-white)}
+        .hero h1 em{color:var(--color-gold);font-style:italic;font-weight:600}
+        .hero-subtitle{font-size:1.1rem;color:var(--color-cream-dark);margin-bottom:2.5rem;max-width:500px;font-weight:300;line-height:1.8}
+        .hero-buttons{display:flex;gap:1.5rem;flex-wrap:wrap}
+        .btn{padding:1rem 2.5rem;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;transition:all .3s ease;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:.5rem}
+        .btn-primary{background:var(--color-gold);color:var(--color-black)}
+        .btn-primary:hover{background:var(--color-gold-light);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+        .btn-outline{background:transparent;color:var(--color-cream);border:1px solid var(--color-gold)}
+        .btn-outline:hover{background:var(--color-gold);color:var(--color-black)}
+        .hero-image{position:relative;animation:fadeIn 1.2s ease}
+        .hero-image img{width:100%;max-width:500px;height:600px;object-fit:cover;border-radius:2px;box-shadow:0 20px 60px rgba(0,0,0,.5);filter:grayscale(20%);transition:filter .5s ease}
+        .hero-image:hover img{filter:grayscale(0%)}
+        .hero-image::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--color-gold);border-radius:2px;z-index:-1;opacity:.5}
+        .trust-bar{background:var(--color-dark);padding:3rem 5%;border-top:1px solid rgba(201,169,97,.1);border-bottom:1px solid rgba(201,169,97,.1)}
+        .trust-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;text-align:center}
+        .trust-item{padding:1rem}
+        .trust-item i{font-size:2rem;color:var(--color-gold);margin-bottom:1rem}
+        .trust-item h3{font-family:var(--font-serif);font-size:1.3rem;margin-bottom:.5rem;color:var(--color-white)}
+        .trust-item p{font-size:.9rem;color:var(--color-cream-dark);font-weight:300}
+        .services{padding:8rem 5%;background:var(--color-black);position:relative}
+        .section-header{text-align:center;max-width:700px;margin:0 auto 5rem}
+        .section-tag{color:var(--color-gold);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;display:block;font-weight:600}
+        .section-title{font-family:var(--font-serif);font-size:clamp(2.5rem,5vw,3.5rem);font-weight:300;color:var(--color-white);margin-bottom:1.5rem}
+        .section-subtitle{color:var(--color-cream-dark);font-size:1.1rem;font-weight:300}
+        .services-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}
+        .service-card{background:var(--color-dark);border:1px solid rgba(201,169,97,.1);padding:3rem 2.5rem;transition:all .4s ease;position:relative;overflow:hidden}
+        .service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--color-gold);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+        .service-card:hover{transform:translateY(-5px);border-color:var(--color-gold);box-shadow:0 15px 40px rgba(0,0,0,.3)}
+        .service-card:hover::before{transform:scaleX(1)}
+        .service-icon{font-size:2.5rem;color:var(--color-gold);margin-bottom:1.5rem}
+        .service-card h3{font-family:var(--font-serif);font-size:1.5rem;margin-bottom:1rem;color:var(--color-white)}
+        .service-card p{color:var(--color-cream-dark);font-size:.95rem;line-height:1.8;font-weight:300}
+        .service-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--color-gold);text-decoration:none;margin-top:1.5rem;font-size:.85rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:gap .3s ease}
+        .service-link:hover{gap:1rem}
+        .about{padding:8rem 5%;background:var(--color-dark);position:relative;overflow:hidden}
+        .about::before{content:'⚖';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:30rem;opacity:.02;color:var(--color-gold);pointer-events:none}
+        .about-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;position:relative;z-index:1}
+        .about-image{position:relative}
+        .about-image img{width:100%;height:700px;object-fit:cover;border-radius:2px;filter:grayscale(30%);transition:filter .5s ease}
+        .about-image:hover img{filter:grayscale(0%)}
+        .about-image::after{content:'';position:absolute;bottom:-30px;right:-30px;width:200px;height:200px;border-right:2px solid var(--color-gold);border-bottom:2px solid var(--color-gold);opacity:.5}
+        .about-content h2{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--color-white);margin-bottom:2rem;line-height:1.2}
+        .about-content h2 em{color:var(--color-gold);font-style:italic}
+        .about-text{color:var(--color-cream-dark);font-size:1rem;line-height:1.9;margin-bottom:2rem;font-weight:300}
+        .about-features{list-style:none;margin-bottom:2.5rem}
+        .about-features li{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;color:var(--color-cream);font-size:.95rem}
+        .about-features li i{color:var(--color-gold);font-size:1rem}
+        .process{padding:8rem 5%;background:var(--color-black)}
+        .process-container{max-width:1400px;margin:0 auto}
+        .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:4rem}
+        .process-step{text-align:center;position:relative;padding:2rem}
+        .process-step:not(:last-child)::after{content:'';position:absolute;top:3rem;right:-1rem;width:2rem;height:1px;background:var(--color-gold);opacity:.3}
+        .step-number{width:60px;height:60px;border:2px solid var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--font-serif);font-size:1.5rem;color:var(--color-gold);font-weight:600}
+        .process-step h3{font-family:var(--font-serif);font-size:1.3rem;color:var(--color-white);margin-bottom:.5rem}
+        .process-step p{color:var(--color-cream-dark);font-size:.9rem;font-weight:300}
+        .testimonials{padding:8rem 5%;background:var(--color-dark);position:relative}
+        .testimonials-slider{max-width:1000px;margin:4rem auto 0;position:relative;overflow:hidden}
+        .testimonial-track{display:flex;transition:transform .5s ease}
+        .testimonial-slide{min-width:100%;padding:0 2rem;text-align:center}
+        .testimonial-text{font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--color-cream);line-height:1.8;margin-bottom:2rem;position:relative}
+        .testimonial-text::before,.testimonial-text::after{content:'"';font-size:4rem;color:var(--color-gold);opacity:.3;position:absolute}
+        .testimonial-text::before{top:-2rem;left:-1rem}
+        .testimonial-text::after{bottom:-3rem;right:-1rem}
+        .testimonial-author{color:var(--color-gold);font-weight:600;letter-spacing:1px}
+        .testimonial-role{color:var(--color-cream-dark);font-size:.85rem;margin-top:.3rem}
+        .slider-controls{display:flex;justify-content:center;gap:1rem;margin-top:3rem}
+        .slider-btn{width:50px;height:50px;border:1px solid var(--color-gold);background:transparent;color:var(--color-gold);border-radius:50%;cursor:pointer;transition:all .3s ease;display:flex;align-items:center;justify-content:center}
+        .slider-btn:hover{background:var(--color-gold);color:var(--color-black)}
+        .contact{padding:8rem 5%;background:var(--color-black);position:relative}
+        .contact-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem}
+        .contact-info h2{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--color-white);margin-bottom:2rem}
+        .contact-info>p{color:var(--color-cream-dark);margin-bottom:3rem;font-weight:300;line-height:1.8}
+        .contact-methods{display:flex;flex-direction:column;gap:2rem}
+        .contact-method{display:flex;align-items:flex-start;gap:1.5rem}
+        .contact-icon{width:50px;height:50px;background:rgba(201,169,97,.1);border:1px solid var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--color-gold);font-size:1.2rem;flex-shrink:0}
+        .contact-method h4{color:var(--color-white);margin-bottom:.3rem;font-size:1rem}
+        .contact-method p,.contact-method a{color:var(--color-cream-dark);text-decoration:none;font-size:.95rem;transition:color .3s ease}
+        .contact-method a:hover{color:var(--color-gold)}
+        .contact-form{background:var(--color-dark);padding:3rem;border:1px solid rgba(201,169,97,.1)}
+        .form-group{margin-bottom:1.5rem}
+        .form-group label{display:block;color:var(--color-cream);margin-bottom:.5rem;font-size:.85rem;letter-spacing:1px;text-transform:uppercase}
+        .form-group input,.form-group textarea,.form-group select{width:100%;padding:1rem;background:rgba(255,255,255,.05);border:1px solid rgba(201,169,97,.2);color:var(--color-cream);font-family:var(--font-sans);font-size:.95rem;transition:all .3s ease}
+        .form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--color-gold);background:rgba(255,255,255,.08)}
+        .form-group textarea{resize:vertical;min-height:120px}
+        .form-group select option{background:var(--color-dark);color:var(--color-cream)}
+        .submit-btn{width:100%;padding:1.2rem;background:var(--color-gold);color:var(--color-black);border:none;font-family:var(--font-sans);font-size:.9rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s ease}
+        .submit-btn:hover{background:var(--color-gold-light);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,169,97,.2)}
+        .whatsapp-float{position:fixed;bottom:2rem;right:2rem;width:60px;height:60px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 20px rgba(37,211,102,.3);z-index:999;transition:all .3s ease;text-decoration:none}
+        .whatsapp-float:hover{transform:scale(1.1) rotate(10deg);box-shadow:0 6px 30px rgba(37,211,102,.4)}
+        footer{background:var(--color-dark);padding:4rem 5% 2rem;border-top:1px solid rgba(201,169,97,.1)}
+        .footer-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:3rem}
+        .footer-brand h3{font-family:var(--font-serif);font-size:1.8rem;color:var(--color-gold);margin-bottom:1rem}
+        .footer-brand p{color:var(--color-cream-dark);font-size:.9rem;line-height:1.8;font-weight:300}
+        .footer-links h4{color:var(--color-white);font-size:.9rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem}
+        .footer-links ul{list-style:none}
+        .footer-links li{margin-bottom:.8rem}
+        .footer-links a{color:var(--color-cream-dark);text-decoration:none;font-size:.9rem;transition:color .3s ease}
+        .footer-links a:hover{color:var(--color-gold)}
+        .footer-bottom{max-width:1400px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(201,169,97,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+        .footer-bottom p{color:var(--color-cream-dark);font-size:.85rem}
+        .social-links{display:flex;gap:1rem}
+        .social-links a{width:40px;height:40px;border:1px solid rgba(201,169,97,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--color-cream);text-decoration:none;transition:all .3s ease}
+        .social-links a:hover{background:var(--color-gold);color:var(--color-black);border-color:var(--color-gold)}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        .fade-in{opacity:0;transform:translateY(30px);transition:all .8s ease}
+        .fade-in.visible{opacity:1;transform:translateY(0)}
+        .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:2000;align-items:center;justify-content:center;padding:2rem}
+        .modal.active{display:flex}
+        .modal-content{background:var(--color-dark);padding:3rem;max-width:500px;width:100%;border:1px solid var(--color-gold);text-align:center;position:relative}
+        .modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--color-cream);font-size:1.5rem;cursor:pointer}
+        .modal-content h3{font-family:var(--font-serif);font-size:2rem;color:var(--color-white);margin-bottom:1rem}
+        .modal-content p{color:var(--color-cream-dark);margin-bottom:2rem}
+        .modal-content .btn{margin:.5rem}
+        @media(max-width:1024px){.hero-container,.about-container,.contact-container{grid-template-columns:1fr;gap:3rem}.hero-image{order:-1}.hero-image img{height:400px;width:100%}.process-grid{grid-template-columns:repeat(2,1fr)}.process-step:not(:last-child)::after{display:none}.footer-container{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:rgba(10,10,10,.98);flex-direction:column;padding:2rem;gap:1.5rem}.nav-links.active{display:flex}.mobile-menu-btn{display:block}.trust-container{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr}.contact-form{padding:2rem 1.5rem}.footer-container{grid-template-columns:1fr;gap:2rem}.hero-buttons{flex-direction:column}.btn{width:100%;justify-content:center}}
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">BERNAL <span>MARÍA LUZ</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-balance-scale"></i>Estudio Jurídico</div>
+                <h1>Nuevo comienzo,<br><em>nuevas posibilidades</em></h1>
+                <p class="hero-subtitle">Te acompaño en cada paso del proceso legal. Un asesoramiento claro, rápido y con el respaldo profesional que necesitás para resolver tu situación.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary"><i class="fab fa-whatsapp"></i>Consulta Gratis</a>
+                    <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bernal María Luz - Abogada">
+            </div>
+        </div>
+    </section>
+    <section class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-item fade-in"><i class="fas fa-user-shield"></i><h3>Cuido tus Derechos</h3><p>Protección integral de tus derechos y los de tu familia</p></div>
+            <div class="trust-item fade-in"><i class="fas fa-file-signature"></i><h3>Trámites Eficientes</h3><p>Procesos simples, rápidos y sin complicaciones</p></div>
+            <div class="trust-item fade-in"><i class="fas fa-hand-holding-heart"></i><h3>Acompañamiento Empático</h3><p>Atención profesional con comprensión humana</p></div>
+        </div>
+    </section>
+    <section class="services" id="servicios">
+        <div class="section-header fade-in">
+            <span class="section-tag">Áreas de Práctica</span>
+            <h2 class="section-title">Servicios Legales Integrales</h2>
+            <p class="section-subtitle">Me ocupo de todo lo que necesitás con experiencia, compromiso y resultados concretos.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in"><div class="service-icon"><i class="fas fa-heart-broken"></i></div><h3>Derecho de Familia</h3><p>Divorcios, separaciones de hecho, régimen de comunicación, filiación, alimentos y todas las cuestiones vinculadas al derecho familiar con sensibilidad y profesionalismo.</p><a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a></div>
+            <div class="service-card fade-in"><div class="service-icon"><i class="fas fa-gavel"></i></div><h3>Divorcio Express</h3><p>Trámites de divorcio de común acuerdo de forma ágil y sin necesidad de comparecencia. Resolución rápida para que puedas seguir adelante.</p><a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a></div>
+            <div class="service-card fade-in"><div class="service-icon"><i class="fas fa-child"></i></div><h3>Patria Potestad</h3><p>Asesoramiento en cuestiones de guarda, régimen de visitas, responsabilidad parental y todos los derechos de los menores.</p><a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a></div>
+            <div class="service-card fade-in"><div class="service-icon"><i class="fas fa-home"></i></div><h3>Sucesiones</h3><p>Trámites sucesorios, declaratoria de herederos, partición de bienes y asesoramiento integral en materia sucesoria.</p><a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a></div>
+            <div class="service-card fade-in"><div class="service-icon"><i class="fas fa-file-contract"></i></div><h3>Contratos</h3><p>Redacción, revisión y negociación de contratos civiles y comerciales. Protección de tus intereses desde el inicio.</p><a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a></div>
+            <div class="service-card fade-in"><div class="service-icon"><i class="fas fa-balance-scale-right"></i></div><h3>Asesoramiento General</h3><p>Consultoría legal preventiva y representación judicial en diversas materias del derecho civil y comercial.</p><a href="#contacto" class="service-link">Consultar <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+    </section>
+    <section class="about" id="sobre-mi">
+        <div class="about-container">
+            <div class="about-image fade-in"><img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="María Luz Bernal - Abogada profesional"></div>
+            <div class="about-content fade-in">
+                <span class="section-tag">Sobre Mí</span>
+                <h2>¿Estás evitando un <em>problema legal?</em></h2>
+                <p class="about-text">El problema jurídico que evitás hoy te espera más grande mañana. Como abogada, mi compromiso es brindarte un asesoramiento claro, directo y efectivo para que tomes las mejores decisiones.</p>
+                <p class="about-text">Con años de experiencia en derecho de familia y civil, entiendo que cada caso es único y requiere una atención personalizada. No tenés que atravesarlo solo.</p>
+                <ul class="about-features">
+                    <li><i class="fas fa-check-circle"></i>Atención personalizada y confidencial</li>
+                    <li><i class="fas fa-check-circle"></i>Amplia experiencia en derecho de familia</li>
+                    <li><i class="fas fa-check-circle"></i>Comunicación clara y sin tecnicismos</li>
+                    <li><i class="fas fa-check-circle"></i>Compromiso real con cada cliente</li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary"><i class="fab fa-whatsapp"></i>Hablemos de tu caso</a>
+            </div>
+        </div>
+    </section>
+    <section class="process" id="proceso">
+        <div class="process-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Cómo Trabajo</span>
+                <h2 class="section-title">Un Proceso Simple y Transparente</h2>
+                <p class="section-subtitle">Lo resolveremos juntos en cuatro pasos claros</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step fade-in"><div class="step-number">01</div><h3>Consulta Inicial</h3><p>Conversamos sobre tu situación de forma confidencial y sin compromiso</p></div>
+                <div class="process-step fade-in"><div class="step-number">02</div><h3>Análisis del Caso</h3><p>Estudio tu situación legal y te presento las opciones disponibles</p></div>
+                <div class="process-step fade-in"><div class="step-number">03</div><h3>Estrategia</h3><p>Diseñamos juntos el plan de acción más conveniente para vos</p></div>
+                <div class="process-step fade-in"><div class="step-number">04</div><h3>Resolución</h3><p>Actuamos con determinación para obtener los mejores resultados</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="section-header fade-in">
+            <span class="section-tag">Testimonios</span>
+            <h2 class="section-title">Lo que dicen mis clientes</h2>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial-track" id="testimonialTrack">
+                <div class="testimonial-slide"><p class="testimonial-text">María Luz me acompañó en el momento más difícil de mi vida. Su profesionalismo y empatía hicieron que todo el proceso de divorcio fuera mucho más llevadero. Siempre estuvo disponible para mis dudas.</p><div class="testimonial-author">Carolina M.</div><div class="testimonial-role">Caso de Divorcio</div></div>
+                <div class="testimonial-slide"><p class="testimonial-text">Excelente abogada. Resolvió la sucesión de mi familia con una claridad y rapidez impresionante. La recomiendo absolutamente por su compromiso y resultados.</p><div class="testimonial-author">Roberto G.</div><div class="testimonial-role">Caso de Sucesión</div></div>
+                <div class="testimonial-slide"><p class="testimonial-text">Por fin una abogada que explica todo sin tecnicismos. Me sentí acompañada en todo momento y el resultado fue mejor de lo que esperaba. Muchas gracias por todo.</p><div class="testimonial-author">Ana L.</div><div class="testimonial-role">Asesoramiento Familiar</div></div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn" onclick="moveSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn" onclick="moveSlider(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contacto">
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <span class="section-tag">Contacto</span>
+                <h2>Comunicate conmigo y empecemos a resolverlo hoy</h2>
+                <p>Este puede ser el inicio de tu tranquilidad. Escribime y te asesoro en forma confidencial. La primera consulta es sin compromiso.</p>
+                <div class="contact-methods">
+                    <div class="contact-method"><div class="contact-icon"><i class="fab fa-whatsapp"></i></div><div><h4>WhatsApp</h4><a href="https://wa.me/549XXXXXXXXXX" target="_blank">+54 9 XX XXXX-XXXX</a></div></div>
+                    <div class="contact-method"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:contacto@bernalmarialuz.com">contacto@bernalmarialuz.com</a></div></div>
+                    <div class="contact-method"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Ubicación</h4><p>Buenos Aires, Argentina</p></div></div>
+                    <div class="contact-method"><div class="contact-icon"><i class="fas fa-clock"></i></div><div><h4>Horario de Atención</h4><p>Lunes a Viernes: 9:00 - 18:00 hs</p></div></div>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <form id="contactForm">
+                    <div class="form-group"><label for="name">Nombre completo</label><input type="text" id="name" name="name" required placeholder="Tu nombre"></div>
+                    <div class="form-group"><label for="email">Correo electrónico</label><input type="email" id="email" name="email" required placeholder="tu@email.com"></div>
+                    <div class="form-group"><label for="phone">Teléfono</label><input type="tel" id="phone" name="phone" placeholder="+54 9 XX XXXX-XXXX"></div>
+                    <div class="form-group"><label for="service">Tipo de consulta</label><select id="service" name="service" required><option value="">Seleccioná un servicio</option><option value="divorcio">Divorcio</option><option value="familia">Derecho de Familia</option><option value="sucesiones">Sucesiones</option><option value="contratos">Contratos</option><option value="general">Consulta General</option></select></div>
+                    <div class="form-group"><label for="message">Mensaje</label><textarea id="message" name="message" placeholder="Contame brevemente sobre tu situación..." required></textarea></div>
+                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i>Enviar Consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float" target="_blank" title="Consultar por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand"><h3>Bernal María Luz</h3><p>Abogada con compromiso real hacia cada cliente. Experiencia, dedicación y resultados en cada caso que confían en mí.</p></div>
+            <div class="footer-links"><h4>Servicios</h4><ul><li><a href="#servicios">Derecho de Familia</a></li><li><a href="#servicios">Divorcios</a></li><li><a href="#servicios">Sucesiones</a></li><li><a href="#servicios">Contratos</a></li></ul></div>
+            <div class="footer-links"><h4>Enlaces</h4><ul><li><a href="#inicio">Inicio</a></li><li><a href="#sobre-mi">Sobre Mí</a></li><li><a href="#proceso">Proceso</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+            <div class="footer-links"><h4>Legal</h4><ul><li><a href="#">Términos de Uso</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Matrícula MP XXXX</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Bernal María Luz - Abogada. Todos los derechos reservados.</p><div class="social-links"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div></div>
+    </footer>
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <i class="fas fa-check-circle" style="font-size:4rem;color:var(--color-gold);margin-bottom:1rem;"></i>
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Gracias por contactarte. Te responderé a la brevedad para coordinar una consulta.</p>
+            <a href="https://wa.me/549XXXXXXXXXX" class="btn btn-primary" target="_blank"><i class="fab fa-whatsapp"></i>Escribir por WhatsApp</a>
+        </div>
+    </div>
+    <script>
+        const navbar=document.getElementById('navbar');
+        window.addEventListener('scroll',()=>{if(window.scrollY>50){navbar.classList.add('scrolled')}else{navbar.classList.remove('scrolled')}});
+        const mobileMenuBtn=document.getElementById('mobileMenuBtn');
+        const navLinks=document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click',()=>{navLinks.classList.toggle('active');const icon=mobileMenuBtn.querySelector('i');if(navLinks.classList.contains('active')){icon.classList.remove('fa-bars');icon.classList.add('fa-times')}else{icon.classList.remove('fa-times');icon.classList.add('fa-bars')}});
+        document.querySelectorAll('.nav-links a').forEach(link=>{link.addEventListener('click',()=>{navLinks.classList.remove('active');mobileMenuBtn.querySelector('i').classList.remove('fa-times');mobileMenuBtn.querySelector('i').classList.add('fa-bars')})});
+        const observerOptions={threshold:.1,rootMargin:'0px 0px -50px 0px'};
+        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el=>{observer.observe(el)});
+        let currentSlide=0;
+        const track=document.getElementById('testimonialTrack');
+        const slides=track.children;
+        const totalSlides=slides.length;
+        function moveSlider(direction){currentSlide+=direction;if(currentSlide<0)currentSlide=totalSlides-1;if(currentSlide>=totalSlides)currentSlide=0;track.style.transform=`translateX(-${currentSlide*100}%)`}
+        setInterval(()=>{moveSlider(1)},6000);
+        const contactForm=document.getElementById('contactForm');
+        const successModal=document.getElementById('successModal');
+        contactForm.addEventListener('submit',(e)=>{e.preventDefault();successModal.classList.add('active');contactForm.reset()});
+        function closeModal(){successModal.classList.remove('active')}
+        successModal.addEventListener('click',(e)=>{if(e.target===successModal){closeModal()}});
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(target){target.scrollIntoView({behavior:'smooth',block:'start'})}})});
+        window.addEventListener('scroll',()=>{const scrolled=window.pageYOffset;const hero=document.querySelector('.hero');if(hero){hero.style.backgroundPositionY=scrolled*.5+'px'}});
+    </script>
+</body>
+</html>
